@@ -55,7 +55,7 @@
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "dev": "cross-env TARGET=kodub API_URL=http://localhost:8000/ webpack serve --mode=development",
-    "build": "cross-env TARGET=kodub API_URL=http://localhost:8000/ webpack --mode=production",
+    "build": "echo 'No build needed'",
     "prebuild-electron": "cross-env TARGET=electron API_URL=http://localhost:8000/ webpack --mode=development",
     "build-electron": "node electron/build.js",
     "preelectron": "cross-env TARGET=electron API_URL=http://localhost:8000/ webpack --mode=development",
