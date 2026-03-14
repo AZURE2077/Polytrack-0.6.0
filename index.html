@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
@@ -96,10 +96,11 @@
       (function(){
         var tag = document.getElementById('airbender-tag');
         function check(){
-          tag.style.display = document.querySelector('#ui .menu-ui') ? 'block' : 'none';
+          var logo = document.querySelector('#ui img.logo');
+          tag.style.display = (logo && !logo.classList.contains('hidden')) ? 'block' : 'none';
         }
         var obs = new MutationObserver(check);
-        obs.observe(document.getElementById('ui'), {childList:true, subtree:true, attributes:true, attributeFilter:['class']});
+        obs.observe(document.getElementById('ui'), {childList:true, subtree:true, attributes:true, attributeFilter:['class','src']});
         check();
       })();
     </script>
